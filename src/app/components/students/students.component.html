@@ -1,0 +1,46 @@
+<h2>{{title}}</h2>
+
+<form (ngSubmit)="onAddItem(f)" #f="ngForm">
+<div class="example-container">
+
+  <mat-form-field hintLabel="Max 15 characters" class="example-full-width">
+    <input matInput #input maxlength="15" placeholder="Name" required class="form-control" #nameInput name="name" ngModel name="name">
+    <mat-hint align="end">{{input.value?.length || 0}}/15</mat-hint>
+  </mat-form-field> <br>
+
+  <mat-form-field hintLabel="Max 15 characters" class="example-full-width">
+    <input matInput #input maxlength="15" placeholder="Last Name" required class="form-control" #lastNameInput name="lastName" ngModel name="lastName">
+    <mat-hint align="end">{{input.value?.length || 0}}/15</mat-hint>
+  </mat-form-field> <br>
+
+  <div [ngStyle]="{'text-align': 'center'}">
+      <mat-form-field class="example-full-width">
+        <select matNativeControl placeholder="Gender" required class="form-control" #genderInput ngModel name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </mat-form-field>
+  </div> <br>
+
+  <mat-form-field hintLabel="Only Numbers" class="example-full-width">
+      <input id="grade" maxlength="1" matInput placeholder="Grade" value="1" required class="form-control" #gradeInput ngModel name="grade">
+  </mat-form-field> <br>
+
+  <mat-form-field class="example-full-width">
+      <input type="date" matInput placeholder="date" value="date" class="form-control" #dateInput ngModel name="dateOfBirth">
+  </mat-form-field> <br>
+
+  <mat-form-field class="example-full-width">
+    <input type="number" matInput placeholder="Phone" value="phone" class="form-control" #phoneInput ngModel name="phone">
+</mat-form-field> <br>
+
+  <mat-form-field class="example-full-width">
+    <input type="email" matInput placeholder="Email" value="email" class="form-control" #emailInput ngModel name="email">
+</mat-form-field> <br>
+
+  <button mat-button type="submit" (click)="onAddItem()">Submit</button>
+</div>
+</form>
+<app-students-list></app-students-list>
+

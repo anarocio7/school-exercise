@@ -1,0 +1,17 @@
+<button mat-button>New Student</button>
+<mat-list *ngFor="let student of students">
+  <mat-list-item>{{ student.name }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>{{ student.lastName }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>{{ student.gender }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>{{ student.grade }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>{{ student.dateOfBirth }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>{{ student.phone }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>{{ student.email }}</mat-list-item>
+</mat-list>
+
